@@ -18,7 +18,7 @@
 					n = 0;
 				}
 				if(options.charDisplay){
-					options.charDisplay.text(n);	
+					$(options.charDisplay).text(n);	
 				}				
 			}
 		});

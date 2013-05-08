@@ -44,7 +44,7 @@
 					var textOutput = options.remainingFormat;
 					textOutput = textOutput.replace("{REMAINING}", numLeft);
 					textOutput = textOutput.replace("{MAX}", options.maxChars);
-					$(statusSelector).text(textOutput);
+					$(statusSelector).html(textOutput);
 				}
 			};
 

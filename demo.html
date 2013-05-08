@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery Limit Characters: Demo</title>
+    </head>
+    <body>
+      <p>
+        <strong>Input field:</strong><br>
+        <input type="text" id="field1" value="Testing!">
+      </p>
+      <p>
+        <strong>Text area:</strong><br>
+        <textarea id="field2">Testing again.</textarea><br>
+        <span class="mySelector"></span>
+      </p>
+    </body>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="jquery.limitChars.js"></script>
+<script>
+  $(function() {
+    $("#field1").limitChars();
+    $("#field2").limitChars({
+      // Amount of characters to limit this field to.
+      maxChars: 250,
+
+      // Show remaining character status or only limit characters?
+      showRemaining: true,
+
+      // Selector for span/div which will contain the status for your characters remaining.
+      // Default: None. Status will be automatically displayed below the field unless a selector for this is specified.
+      charDisplay: ".mySelector",
+
+      // Allows you to specify a custom status format.
+      // Default: "Characters Remaining: {REMAINING}/{MAX}"
+      remainingFormat: "You have <strong>{REMAINING}</strong> characters remaining (out of {MAX})."
+    });
+ });
+</script>
+</html>
